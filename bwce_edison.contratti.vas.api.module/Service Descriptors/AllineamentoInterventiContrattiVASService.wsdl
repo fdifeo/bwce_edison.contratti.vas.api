@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/AllineamentoInterventiContrattiVASService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AllineamentoInterventiContrattiVASService" targetNamespace="http://www.tibco.com/AllineamentoInterventiContrattiVASService/" xmlns:xsd1="http://www.example.org/AllineamentoInterventiContrattiVASRequest" xmlns:xsd2="http://www.example.org/AllineamentoInterventiContrattiVASResponse">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/AllineamentoInterventiContrattiVASService/">
+      <xsd:element name="allineamentoInterventiContrattiVAS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="allineamentoInterventiContrattiVASResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.example.org/AllineamentoInterventiContrattiVASRequest"
+    		schemaLocation="../Schemas/main/AllineamentoInterventiContrattiVASRequest.xsd">
+    	</xsd:import>
+    	<xsd:import
+    		namespace="http://www.example.org/AllineamentoInterventiContrattiVASResponse"
+    		schemaLocation="../Schemas/main/AllineamentoInterventiContrattiVASResponse.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="allineamentoInterventiContrattiVASRequest">
+    <wsdl:part element="xsd1:Input" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="allineamentoInterventiContrattiVASResponse">
+    <wsdl:part element="xsd2:Output" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AllineamentoInterventiContrattiVASService">
+    <wsdl:operation name="allineamentoInterventiContrattiVAS">
+      <wsdl:input message="tns:allineamentoInterventiContrattiVASRequest"/>
+      <wsdl:output message="tns:allineamentoInterventiContrattiVASResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AllineamentoInterventiContrattiVASServiceSOAP" type="tns:AllineamentoInterventiContrattiVASService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="allineamentoInterventiContrattiVAS">
+      <soap:operation soapAction="http://www.tibco.com/AllineamentoInterventiContrattiVASService/allineamentoInterventiContrattiVAS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AllineamentoInterventiContrattiVASService">
+    <wsdl:port binding="tns:AllineamentoInterventiContrattiVASServiceSOAP" name="AllineamentoInterventiContrattiVASServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

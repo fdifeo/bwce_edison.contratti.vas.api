@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AllineamentoInterventiContrattiVASResponse" xmlns:tns="http://www.example.org/AllineamentoInterventiContrattiVASResponse" elementFormDefault="qualified">
+	<element name="Output">
+		<complexType>
+			<sequence>
+				<element name="Posizione" type="tns:Posizione"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+	    <complexType name="Posizione">
+		<sequence>
+				<element minOccurs="0" name="Tipologia_Intervento_Eseguito" type="string"/>
+				<element minOccurs="0" name="Stato_Intervento" type="string"/>  
+				<element minOccurs="0" name="Data_Creazione_Intervento" type="string"/>  
+				<element minOccurs="0" name="Data_Assegnazione_Intervento" type="string"/>
+				<element minOccurs="0" name="Data_Inizio_Ultimo_Appuntamento" type="string"/>  
+				<element minOccurs="0" name="Data_Fine_Ultimo_Appuntamento" type="string"/>  
+				<element minOccurs="0" name="Data_Chiusura_Intervento" type="string"/>
+    	</sequence>
+    </complexType>
+</schema>

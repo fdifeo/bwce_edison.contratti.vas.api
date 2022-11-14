@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AllineamentoInterventiContrattiVASRequest" xmlns:tns="http://www.example.org/AllineamentoInterventiContrattiVASRequest" elementFormDefault="qualified">
+  <element name="Input" >
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="Codice_BP" type="string"/>
+				<element minOccurs="0" name="Codice_HSIT" type="string"/>  
+			</sequence>
+		</complexType>
+  </element>
+</schema>

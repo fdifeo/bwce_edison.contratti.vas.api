@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_pV_2EGQPEe2MUaI7IxL9-A" targetNamespace="http://tns.tibco.com/bw/composite/bwce_edison.contratti.vas.api.module" name="bwce_edison.contratti.vas.api.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AllineamentoInterventiContrattiVASRequest="http://www.example.org/AllineamentoInterventiContrattiVASRequest" xmlns:AllineamentoInterventiContrattiVASResponse="http://www.example.org/AllineamentoInterventiContrattiVASResponse" xmlns:AllineamentoInterventiContrattiVASService="http://www.tibco.com/AllineamentoInterventiContrattiVASService/" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_pV_2EGQPEe2MUaI7IxL9-A" targetNamespace="http://tns.tibco.com/bw/composite/bwce_edison.contratti.vas.api.module" name="bwce_edison.contratti.vas.api.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_tWNyIGQuEe2bRY7uvVW8eQ" name="AllineamentoInterventiContrattiVASService" promote="ComponentAllineamentoInterventiContrattiVAS/AllineamentoInterventiContrattiVASService">
+    <sca:interface.wsdl xmi:id="_tWeQ0GQuEe2bRY7uvVW8eQ" interface="http://www.tibco.com/AllineamentoInterventiContrattiVASService/#wsdl.interface(AllineamentoInterventiContrattiVASService)" scaext:wsdlLocation="../Service%20Descriptors/AllineamentoInterventiContrattiVASService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_CRdAgGQwEe2bRY7uvVW8eQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/4e1c8374502249708b296cc5423a60bf/SOAPServiceBinding" portTypeQName="AllineamentoInterventiContrattiVASService:AllineamentoInterventiContrattiVASService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.contratti.vas.api.module/Service%20Descriptors/AllineamentoInterventiContrattiVASService.wsdl">
+      <bindingType xmi:id="_CR2CEGQwEe2bRY7uvVW8eQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_HTkPgGQwEe2bRY7uvVW8eQ" endpointURI="/SOAPServiceBinding/allineamentoInterventiContrattiVASService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_CR66kGQwEe2bRY7uvVW8eQ" operationName="allineamentoInterventiContrattiVAS" action="allineamentoInterventiContrattiVAS" actionNeeded="true">
+        <bindingType xmi:id="_CR66kWQwEe2bRY7uvVW8eQ"/>
+        <messageConfiguration xmi:id="_CR66kmQwEe2bRY7uvVW8eQ" messageQName="AllineamentoInterventiContrattiVASService:allineamentoInterventiContrattiVASRequest" wsdlLocation="platform:/resource/bwce_edison.contratti.vas.api.module/Service%20Descriptors/AllineamentoInterventiContrattiVASService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_CR66k2QwEe2bRY7uvVW8eQ" partName="parameters" partElementName="AllineamentoInterventiContrattiVASRequest:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_CR66lGQwEe2bRY7uvVW8eQ" messageQName="AllineamentoInterventiContrattiVASService:allineamentoInterventiContrattiVASResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.contratti.vas.api.module/Service%20Descriptors/AllineamentoInterventiContrattiVASService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_CR66lWQwEe2bRY7uvVW8eQ" partName="parameters" partElementName="AllineamentoInterventiContrattiVASResponse:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_CR7hoGQwEe2bRY7uvVW8eQ">
+          <inputMapping xmi:id="_CR8vwGQwEe2bRY7uvVW8eQ"/>
+          <outputMapping xmi:id="_CR8vwWQwEe2bRY7uvVW8eQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_CR9W0GQwEe2bRY7uvVW8eQ" bindingName="SOAPServiceBinding"/>
+  </sca:service>
   <sca:property xmi:id="_rN5L0GQPEe2MUaI7IxL9-A" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_rOEK8GQPEe2MUaI7IxL9-A" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_rOK4oGQPEe2MUaI7IxL9-A" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
@@ -7,7 +28,10 @@
   <sca:property xmi:id="_rOXF4GQPEe2MUaI7IxL9-A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_rOeaoGQPEe2MUaI7IxL9-A" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_rOnkkGQPEe2MUaI7IxL9-A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_qEO1EGQPEe2MUaI7IxL9-A" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_qEQDMGQPEe2MUaI7IxL9-A" processName="bwce_edison.contratti.vas.api.module.Process"/>
+  <sca:component xmi:id="_Ss72IGQdEe2bRY7uvVW8eQ" name="ComponentAllineamentoInterventiContrattiVAS" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ss72IWQdEe2bRY7uvVW8eQ" processName="bwce_edison.contratti.vas.api.soap.main.AllineamentoInterventiContrattiVAS"/>
+    <sca:service xmi:id="_tV_vsGQuEe2bRY7uvVW8eQ" name="AllineamentoInterventiContrattiVASService">
+      <sca:interface.wsdl xmi:id="_tWCL8GQuEe2bRY7uvVW8eQ" interface="http://www.tibco.com/AllineamentoInterventiContrattiVASService/#wsdl.interface(AllineamentoInterventiContrattiVASService)"/>
+    </sca:service>
   </sca:component>
 </sca:composite>

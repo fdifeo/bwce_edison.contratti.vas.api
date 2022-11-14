@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1668444374791" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1668444374791">
+  <complexType name="OAuthElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="access_token" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="instance_url" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="token_type" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="issued_at" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="signature" type="string"/>
+    </sequence>
+  </complexType>
+  <element name="OAuthElement" type="tns:OAuthElementType"/>
+</schema>
