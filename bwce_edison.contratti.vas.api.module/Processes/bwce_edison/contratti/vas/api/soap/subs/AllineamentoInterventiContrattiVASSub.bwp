@@ -12,6 +12,8 @@
     xmlns:ns11="http://tns.tibco.com/bw/json/1668441844843"
     xmlns:ns12="activity.jsonParser.input+2f4102dd-db97-402b-98cf-b40b356eac66+ActivityInputType"
     xmlns:ns13="http://tns.tibco.com/bw/json/1668444374791"
+    xmlns:ns14="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1668609647225"
+    xmlns:ns15="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.Log"
     xmlns:ns2="http://www.example.org/AllineamentoInterventiContrattiVASRequest"
     xmlns:ns3="http://www.example.org/AllineamentoInterventiContrattiVASResponse"
     xmlns:ns4="http://www.tibco.com/namespaces/tnt/plugins/restinvoke+4b9ef4ec-44dc-46cd-84f1-fbb18ce14213+RestInvokeInput"
@@ -792,6 +794,18 @@
             </complexType>
             <element name="ActivityInputClass" type="tns:ActivityInputClassType"/>
         </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.Log"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.Log">
+            <import namespace="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:PSGLogPluginException"/>
+                </choice>
+            </complexType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="tibco"
         createdOn="Mon Nov 14 14:40:05 CET 2022" description=""
@@ -880,7 +894,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="688"
+                                    <layoutConstraint x="1108"
                                     xsi:type="notation:Bounds" y="148"/>
                                     </children>
                                     <children type="4002">
@@ -911,7 +925,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint x="135"
+                                    <layoutConstraint x="270"
                                     xsi:type="notation:Bounds" y="148"/>
                                     </children>
                                     <children type="4002">
@@ -942,7 +956,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="400"
+                                    <layoutConstraint x="680"
                                     xsi:type="notation:Bounds" y="148"/>
                                     </children>
                                     <children type="4002">
@@ -973,7 +987,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
-                                    <layoutConstraint x="544"
+                                    <layoutConstraint x="824"
                                     xsi:type="notation:Bounds" y="148"/>
                                     </children>
                                     <children type="4002">
@@ -1004,7 +1018,100 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint x="247"
+                                    <layoutConstraint x="396"
+                                    xsi:type="notation:Bounds" y="148"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint x="121"
+                                    xsi:type="notation:Bounds" y="148"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint x="968"
+                                    xsi:type="notation:Bounds" y="148"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint x="534"
                                     xsi:type="notation:Bounds" y="148"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1019,8 +1126,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="407"
-                                    width="821" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="300"
+                                    width="1241" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1029,7 +1136,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="407" width="824" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="300" width="1244" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -1088,7 +1195,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    x="243"
+                                    x="372"
                                     xsi:type="notation:Bounds" y="46"/>
                                     </children>
                                     <children type="4002">
@@ -1129,7 +1236,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
                                     <layoutConstraint
-                                    x="36"
+                                    x="111"
                                     xsi:type="notation:Bounds" y="46"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1145,7 +1252,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     <layoutConstraint
-                                    height="168" width="417" xsi:type="notation:Bounds"/>
+                                    height="168" width="723" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1153,9 +1260,11 @@
                                     <styles fontName="Sans"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <styles restoreHeight="178"
+                                    restoreWidth="1194" xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="178"
+                                    width="1194" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -1164,7 +1273,8 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity/@faultHandlers"/>
-                            <layoutConstraint height="200" width="424" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="200" width="1204"
+                                x="22" xsi:type="notation:Bounds" y="300"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1174,7 +1284,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="608" width="824" x="1"
+                    <layoutConstraint height="501" width="1244" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1183,13 +1293,13 @@
             </children>
             <styles fontName="Sans" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="660" width="1166" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="553" width="1586" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1233,7 +1343,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1241,10 +1351,11 @@
             <styles fontName="Sans" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[25, 0, -125, 0]$[126, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.7551020408163265,0.4897959183673469)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1252,6 +1363,39 @@
             <styles fontName="Sans" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[25, 0, -128, 0]$[129, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 0, -150, 0]$[151, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[25, 0, -115, 0]$[116, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[25, 0, -141, 0]$[142, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1267,11 +1411,24 @@
             namespace="http://www.example.org/AllineamentoInterventiContrattiVASRequest" prefix="tns4"/>
         <tibex:namespaceItem
             namespace="activity.jsonParser.input+2f4102dd-db97-402b-98cf-b40b356eac66+ActivityInputType" prefix="tns5"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/PSGLogActivities" prefix="tns6"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/json/1668444374791" prefix="tns7"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/json/1668441844843" prefix="tns8"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1668609647225" prefix="tns9"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/AllineamentoInterventiContrattiVASRequest"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/AllineamentoInterventiContrattiVASResponse"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1668441844843"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/json/1668444374791"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1668609647225"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1286,18 +1443,18 @@
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns3:Output" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable name="httpClientResource"
+        <bpws:variable name="httpClientResourceWorkOrder"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
             <bpws:from>
-                <bpws:literal>SFDC.HttpClientResource</bpws:literal>
+                <bpws:literal>salesforce.HttpClientResourceWorkOrder</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns4:RestActivityInput"
-            name="InvokeRESTAPI-input" sca-bpel:internal="true"/>
+            name="InvokeRESTAPI_OAuth2-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:RestActivityOutput"
-            name="InvokeRESTAPI" sca-bpel:internal="true"/>
+            name="InvokeRESTAPI_OAuth2" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:ActivityErrorData"
             name="_error_InvokeRESTAPI_WorkOrder" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:RestActivityInput"
@@ -1307,15 +1464,35 @@
         <bpws:variable element="ns6:ActivityErrorData"
             name="_error_InvokeRESTAPI1" sca-bpel:internal="true"/>
         <bpws:variable element="ns9:ActivityInputClass"
-            name="ParseJSON-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns11:WorkOrderElement" name="ParseJSON" sca-bpel:internal="true"/>
+            name="WorkOrderResponse-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:WorkOrderElement"
+            name="WorkOrderResponse" sca-bpel:internal="true"/>
         <bpws:variable element="ns10:ActivityErrorData"
-            name="_error_ParseJSON" sca-bpel:internal="true"/>
+            name="_error_OAuth2Response" sca-bpel:internal="true"/>
         <bpws:variable element="ns12:ActivityInputClass"
-            name="ParseJSON1-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns13:OAuthElement" name="ParseJSON1" sca-bpel:internal="true"/>
+            name="OAuth2Response-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns13:OAuthElement" name="OAuth2Response" sca-bpel:internal="true"/>
         <bpws:variable element="ns10:ActivityErrorData"
             name="_error_ParseJSON1" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:LogInput"
+            name="LogInvokeStartSFDC-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:ActivityErrorData"
+            name="_error_LogInvokeStartSFDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:LogInput"
+            name="LogInvokeEndSFDC-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:ActivityErrorData"
+            name="_error_LogInvokeEndSFDC" sca-bpel:internal="true"/>
+        <bpws:variable element="ns14:MapperInput"
+            name="SetInputQuery-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns14:MapperInput" name="SetInputQuery" sca-bpel:internal="true"/>
+        <bpws:variable name="httpClientResourceOAuth2"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>salesforce.HttpClientResourceOAuth2</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1344,7 +1521,7 @@
                                 </bpws:targets>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASResponse&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:Output/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASResponse&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns3:Output>&lt;tns3:Posizione>&lt;tns3:Stato_Intervento>&lt;xsl:value-of select=&quot;'KO'&quot;/>&lt;/tns3:Stato_Intervento>&lt;/tns3:Posizione>&lt;/tns3:Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -1372,7 +1549,7 @@
                                 </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;ExceptionLog-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:ExceptionLogInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;ExceptionLog-input&quot; match=&quot;/&quot;>&lt;tns6:ExceptionLogInput>&lt;tns6:Input>&lt;tns6:errorCode>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/tns6:errorCode>&lt;tns6:errorMessage>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/tns6:errorMessage>&lt;tns6:processStack>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/tns6:processStack>&lt;tns6:stackTrace>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/tns6:stackTrace>&lt;/tns6:Input>&lt;/tns6:ExceptionLogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -1397,11 +1574,14 @@
         </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToInvokeRESTAPI" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToLog" tibex:linkType="SUCCESS"/>
                 <bpws:link name="InvokeRESTAPIToParseJSON1" tibex:linkType="SUCCESS"/>
                 <bpws:link name="InvokeRESTAPI1ToParseJSON" tibex:linkType="SUCCESS"/>
-                <bpws:link name="ParseJSONToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="ParseJSON1ToInvokeRESTAPI_WorkOrder" tibex:linkType="SUCCESS"/>
+                <bpws:link name="WorkOrderResponseToLog1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="OAuth2ResponseToMapper" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogToInvokeRESTAPI_OAuth2" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Log1ToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="MapperToInvokeRESTAPI_WorkOrder" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1409,7 +1589,7 @@
                     tibex:xpdlId="1cca1037-2938-4751-b537-dad206ea2793"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToInvokeRESTAPI"/>
+                        <bpws:source linkName="StartToLog"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1421,11 +1601,11 @@
                     name="End"
                     tibex:xpdlId="05fda093-6d7a-4612-b51a-a81f02ea6a16" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="ParseJSONToEnd"/>
+                        <bpws:target linkName="Log1ToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASResponse&quot; xmlns:tns6=&quot;http://tns.tibco.com/bw/json/1668441844843&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:Output>&#xa;            &lt;tns3:Posizione>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:FS_WorkTypeName__c&quot;>&#xa;                    &lt;tns3:Tipologia_Intervento_Eseguito>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:FS_WorkTypeName__c&quot;/>&#xa;                    &lt;/tns3:Tipologia_Intervento_Eseguito>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:Status&quot;>&#xa;                    &lt;tns3:Stato_Intervento>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:Status&quot;/>&#xa;                    &lt;/tns3:Stato_Intervento>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:FS_CreatedDateFormula__c&quot;>&#xa;                    &lt;tns3:Data_Creazione_Intervento>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:FS_CreatedDateFormula__c&quot;/>&#xa;                    &lt;/tns3:Data_Creazione_Intervento>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:FS_AssignmentDateTime__c&quot;>&#xa;                    &lt;tns3:Data_Assegnazione_Intervento>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:FS_AssignmentDateTime__c&quot;/>&#xa;                    &lt;/tns3:Data_Assegnazione_Intervento>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:FS_ActivityStartDateTime__c&quot;>&#xa;                    &lt;tns3:Data_Inizio_Ultimo_Appuntamento>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:FS_ActivityStartDateTime__c&quot;/>&#xa;                    &lt;/tns3:Data_Inizio_Ultimo_Appuntamento>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:FS_ActivityFinishDateTime__c&quot;>&#xa;                    &lt;tns3:Data_Fine_Ultimo_Appuntamento>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:FS_ActivityFinishDateTime__c&quot;/>&#xa;                    &lt;/tns3:Data_Fine_Ultimo_Appuntamento>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$ParseJSON/tns6:records[1]/tns6:FS_FinalBalanceApprovalDate__c&quot;>&#xa;                    &lt;tns3:Data_Chiusura_Intervento>&#xa;                        &lt;xsl:value-of select=&quot;$ParseJSON/tns6:records[1]/tns6:FS_FinalBalanceApprovalDate__c&quot;/>&#xa;                    &lt;/tns3:Data_Chiusura_Intervento>&#xa;                &lt;/xsl:if>&#xa;            &lt;/tns3:Posizione>&#xa;        &lt;/tns3:Output>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASResponse&quot; xmlns:tns7=&quot;http://tns.tibco.com/bw/json/1668441844843&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns3:Output/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1446,18 +1626,19 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     governedObjectTypes="BWHttpReference"
-                    inputVariable="InvokeRESTAPI-input"
-                    name="InvokeRESTAPI" outputVariable="InvokeRESTAPI"
+                    inputVariable="InvokeRESTAPI_OAuth2-input"
+                    name="InvokeRESTAPI_OAuth2"
+                    outputVariable="InvokeRESTAPI_OAuth2"
                     tibex:xpdlId="4b9ef4ec-44dc-46cd-84f1-fbb18ce14213" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToInvokeRESTAPI"/>
+                        <bpws:target linkName="LogToInvokeRESTAPI_OAuth2"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="InvokeRESTAPIToParseJSON1"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/restinvoke+4b9ef4ec-44dc-46cd-84f1-fbb18ce14213+RestInvokeInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;InvokeRESTAPI-input&quot; match=&quot;/&quot;>&lt;tns:RestActivityInput>&lt;tns:QueryParameters>&lt;username>&lt;xsl:value-of select=&quot;'USERNAME'&quot;/>&lt;/username>&lt;password>&lt;xsl:value-of select=&quot;'PASSWORD'&quot;/>&lt;/password>&lt;grant_type>&lt;xsl:value-of select=&quot;'password'&quot;/>&lt;/grant_type>&lt;client_id>&lt;xsl:value-of select=&quot;'CLIENT_ID'&quot;/>&lt;/client_id>&lt;client_secret>&lt;xsl:value-of select=&quot;'CLIENT_SECRET'&quot;/>&lt;/client_secret>&lt;/tns:QueryParameters>&lt;/tns:RestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/restinvoke+4b9ef4ec-44dc-46cd-84f1-fbb18ce14213+RestInvokeInput&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;InvokeRESTAPI_OAuth2-input&quot; match=&quot;/&quot;>&lt;tns:RestActivityInput>&lt;tns:QueryParameters>&lt;username>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;username&amp;quot;)&quot;/>&lt;/username>&lt;password>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;password&amp;quot;)&quot;/>&lt;/password>&lt;grant_type>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;grant_type&amp;quot;)&quot;/>&lt;/grant_type>&lt;client_id>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;client_id&amp;quot;)&quot;/>&lt;/client_id>&lt;client_secret>&lt;xsl:value-of select=&quot;bw:getModuleProperty(&amp;quot;client_secret&amp;quot;)&quot;/>&lt;/client_secret>&lt;/tns:QueryParameters>&lt;/tns:RestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1469,7 +1650,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//RestInvokeActivity"/>
                                     <value
-                                    httpClientSR="httpClientResource"
+                                    httpClientSR="httpClientResourceOAuth2"
                                     httpMethod="POST"
                                     requestContentType="JSON"
                                     resourcePath="/services/oauth2/token?username=USERNAME&amp;password=PASSWORD&amp;grant_type=password&amp;client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET"
@@ -1488,14 +1669,14 @@
                     outputVariable="InvokeRESTAPI_WorkOrder"
                     tibex:xpdlId="126540d0-ad61-4c28-80ea-80318a695ff0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="ParseJSON1ToInvokeRESTAPI_WorkOrder"/>
+                        <bpws:target linkName="MapperToInvokeRESTAPI_WorkOrder"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="InvokeRESTAPI1ToParseJSON"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/restinvoke+126540d0-ad61-4c28-80ea-80318a695ff0+RestInvokeInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;InvokeRESTAPI_WorkOrder-input&quot; match=&quot;/&quot;>&lt;tns1:RestActivityInput>&lt;tns1:QueryParameters>&lt;q>&lt;xsl:value-of select=&quot;'test'&quot;/>&lt;/q>&lt;/tns1:QueryParameters>&lt;/tns1:RestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/restinvoke+126540d0-ad61-4c28-80ea-80318a695ff0+RestInvokeInput&quot; xmlns:tns7=&quot;http://tns.tibco.com/bw/json/1668444374791&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;OAuth2Response&quot;/>&lt;xsl:template name=&quot;InvokeRESTAPI_WorkOrder-input&quot; match=&quot;/&quot;>&lt;tns1:RestActivityInput>&lt;HttpHeaders>&lt;Content-Type>&lt;xsl:value-of select=&quot;'application/json'&quot;/>&lt;/Content-Type>&lt;DynamicHeaders>&lt;Header>&lt;Name>&lt;xsl:value-of select=&quot;'Authorization'&quot;/>&lt;/Name>&lt;Value>&lt;xsl:value-of select=&quot;concat('Bearer ', $OAuth2Response/tns7:access_token)&quot;/>&lt;/Value>&lt;/Header>&lt;/DynamicHeaders>&lt;/HttpHeaders>&lt;tns1:QueryParameters>&lt;q>&lt;xsl:value-of select=&quot;&amp;quot;SELECT+FS_WorkTypeName__c,+Status,+FS_CreatedDateFormula__c,+&amp;#xA;FS_AssignmentDateTime__c,+FS_ActivityStartDateTime__c,+&amp;#xA;FS_ActivityFinishDateTime__c,+FS_FinalBalanceApprovalDate__c&amp;#xA;+from+WorkOrder+where+(ServiceContract.AC_Contract_Code__c+=+$SetInputQuery/AC_Contract_Code+&amp;#xA;OR+ServiceContract.AC_Commodity_Client_Code__c+=+$SetInputQuery/AC_Commodity_Client_Code)+&amp;#xA;and+ServiceContract.AC_Commodity_Client_Code__c!=''&amp;quot;&quot;/>&lt;/q>&lt;/tns1:QueryParameters>&lt;/tns1:RestActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1507,9 +1688,9 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//RestInvokeActivity"/>
                                     <value
-                                    httpClientSR="httpClientResource"
+                                    httpClientSR="httpClientResourceWorkOrder"
                                     requestContentType="JSON"
-                                    resourcePath="https://assistenzacasa--uat.sandbox.my.salesforce.com/services/data/v54.0/query/?q="
+                                    resourcePath="/services/data/v54.0/query/?q="
                                     responseAcceptType="JSON" xsi:type="restjson:RestInvokeActivity"/>
                                 </properties>
                             </activityConfig>
@@ -1518,14 +1699,16 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="ParseJSON-input"
-                    name="ParseJSON" outputVariable="ParseJSON"
+                <tibex:activityExtension
+                    inputVariable="WorkOrderResponse-input"
+                    name="WorkOrderResponse"
+                    outputVariable="WorkOrderResponse"
                     tibex:xpdlId="17de4743-7331-4ecf-962d-ffc7441cfe05" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="InvokeRESTAPI1ToParseJSON"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="ParseJSONToEnd"/>
+                        <bpws:source linkName="WorkOrderResponseToLog1"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1552,18 +1735,19 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="ParseJSON1-input" name="ParseJSON1"
-                    outputVariable="ParseJSON1"
+                    inputVariable="OAuth2Response-input"
+                    name="OAuth2Response"
+                    outputVariable="OAuth2Response"
                     tibex:xpdlId="2f4102dd-db97-402b-98cf-b40b356eac66" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="InvokeRESTAPIToParseJSON1"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="ParseJSON1ToInvokeRESTAPI_WorkOrder"/>
+                        <bpws:source linkName="OAuth2ResponseToMapper"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;activity.jsonParser.input+2f4102dd-db97-402b-98cf-b40b356eac66+ActivityInputType&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;InvokeRESTAPI&quot;/>&lt;xsl:template name=&quot;ParseJSON1-input&quot; match=&quot;/&quot;>&lt;tns5:ActivityInputClass>&lt;jsonString>&lt;xsl:value-of select=&quot;$InvokeRESTAPI/MessageBody/asciiContent&quot;/>&lt;/jsonString>&lt;/tns5:ActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;activity.jsonParser.input+2f4102dd-db97-402b-98cf-b40b356eac66+ActivityInputType&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;InvokeRESTAPI_OAuth2&quot;/>&#xa;    &lt;xsl:template name=&quot;ParseJSON1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:ActivityInputClass>&#xa;            &lt;jsonString>&#xa;                &lt;xsl:value-of select=&quot;$InvokeRESTAPI_OAuth2/MessageBody/asciiContent&quot;/>&#xa;            &lt;/jsonString>&#xa;        &lt;/tns5:ActivityInputClass>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1578,6 +1762,102 @@
                                     schemaType="Xsd" xsi:type="restjson:JsonParser">
                                     <outputEditorElement href="platform:/resource/bwce_edison.contratti.vas.api.module/Schemas/subs/OAuthResource.xsd#//OAuthElement;XSDElementDeclaration"/>
                                     </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="LogInvokeStartSFDC-input"
+                    name="LogInvokeStartSFDC"
+                    tibex:xpdlId="df0bf40e-2f3c-4cb6-9c38-c2c4e3524985" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToLog"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LogToInvokeRESTAPI_OAuth2"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LogInvokeStartSFDC-input&quot; match=&quot;/&quot;>&lt;tns6:LogInput>&lt;tns6:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns6:targetSystem>&lt;tns6:message>&lt;xsl:value-of select=&quot;'Inizio gestione richiesta su layer sub per operation allineamentoInterventiContrattiVAS'&quot;/>&lt;/tns6:message>&lt;tns6:additionalLogParams>&lt;tns6:keyValuePair>&lt;tns6:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns6:key>&lt;tns6:value>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),false())&quot;/>&lt;/tns6:value>&lt;/tns6:keyValuePair>&lt;/tns6:additionalLogParams>&lt;/tns6:LogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity activityTypeID="bw.psglog.Log"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:psglog="http://ns.tibco.com/bw/palette/psglog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/psglog#//Log"/>
+                                    <value Level="Info"
+                                    Phase="InvokeStart" xsi:type="psglog:Log"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="LogInvokeEndSFDC-input"
+                    name="LogInvokeEndSFDC"
+                    tibex:xpdlId="0a29fae3-874e-4f3c-a29f-d15bbbb21999" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="WorkOrderResponseToLog1"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Log1ToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;WorkOrderResponse&quot;/>&lt;xsl:template name=&quot;LogInvokeEndSFDC-input&quot; match=&quot;/&quot;>&lt;tns6:LogInput>&lt;tns6:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns6:targetSystem>&lt;tns6:message>&lt;xsl:value-of select=&quot;'Fine gestione richiesta su layer sub per operation allineamentoInterventiContrattiVAS'&quot;/>&lt;/tns6:message>&lt;tns6:additionalLogParams>&lt;tns6:keyValuePair>&lt;tns6:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns6:key>&lt;tns6:value>&lt;xsl:value-of select=&quot;tib:render-xml($WorkOrderResponse, false(), false())&quot;/>&lt;/tns6:value>&lt;/tns6:keyValuePair>&lt;/tns6:additionalLogParams>&lt;/tns6:LogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity activityTypeID="bw.psglog.Log"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:psglog="http://ns.tibco.com/bw/palette/psglog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/psglog#//Log"/>
+                                    <value Level="Info"
+                                    Phase="InvokeEnd" xsi:type="psglog:Log"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="SetInputQuery-input"
+                    name="SetInputQuery" outputVariable="SetInputQuery"
+                    tibex:xpdlId="d141a3c5-9772-45b7-b5b7-5447759742d4" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="OAuth2ResponseToMapper"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="MapperToInvokeRESTAPI_WorkOrder"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1668609647225&quot; xmlns:tns4=&quot;http://www.example.org/AllineamentoInterventiContrattiVASRequest&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;SetInputQuery-input&quot; match=&quot;/&quot;>&lt;tns9:MapperInput>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length($Start/tns4:Codice_BP)>0&quot;>&lt;xsl:if test=&quot;$Start/tns4:Codice_BP&quot;>&lt;AC_Commodity_Client_Code>&lt;xsl:value-of select=&quot;$Start/tns4:Codice_BP&quot;/>&lt;/AC_Commodity_Client_Code>&lt;/xsl:if>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:if test=&quot;$Start/tns4:Codice_HSIT&quot;>&lt;AC_Commodity_Client_Code>&lt;xsl:value-of select=&quot;$Start/tns4:Codice_HSIT&quot;/>&lt;/AC_Commodity_Client_Code>&lt;/xsl:if>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length($Start/tns4:Codice_BP)>0&quot;>&lt;xsl:if test=&quot;$Start/tns4:Codice_BP&quot;>&lt;AC_Contract_Code>&lt;xsl:value-of select=&quot;$Start/tns4:Codice_BP&quot;/>&lt;/AC_Contract_Code>&lt;/xsl:if>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:if test=&quot;$Start/tns4:Codice_HSIT&quot;>&lt;AC_Contract_Code>&lt;xsl:value-of select=&quot;$Start/tns4:Codice_HSIT&quot;/>&lt;/AC_Contract_Code>&lt;/xsl:if>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns9:MapperInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.mapper"
+                            version="6.0.0.001"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities"
+                            xmlns:mapper_1668609647225="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1668609647225" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
+                                    <value
+                                    inputQName="mapper_1668609647225:MapperInput" xsi:type="generalactivities:Mapper"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

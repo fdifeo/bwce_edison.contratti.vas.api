@@ -28,6 +28,13 @@
   <sca:property xmi:id="_rOXF4GQPEe2MUaI7IxL9-A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_rOeaoGQPEe2MUaI7IxL9-A" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_rOnkkGQPEe2MUaI7IxL9-A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_vBxpAGXDEe2WWs9uMFkfYQ" name="/Resources/internal/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_wuQY8GXDEe2WWs9uMFkfYQ" name="/Resources/salesforce/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KA3ssGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_P1DR0GXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_P79LEGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/client_id" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QAGEMGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/client_secret" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QDqVkGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/grant_type" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_Ss72IGQdEe2bRY7uvVW8eQ" name="ComponentAllineamentoInterventiContrattiVAS" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ss72IWQdEe2bRY7uvVW8eQ" processName="bwce_edison.contratti.vas.api.soap.main.AllineamentoInterventiContrattiVAS"/>
     <sca:service xmi:id="_tV_vsGQuEe2bRY7uvVW8eQ" name="AllineamentoInterventiContrattiVASService">

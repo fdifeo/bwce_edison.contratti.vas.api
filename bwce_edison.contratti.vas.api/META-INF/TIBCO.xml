@@ -51,6 +51,55 @@
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///Resources/internal/newProperty</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///Resources/salesforce/newProperty</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///OAuth2/queryParams/password</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///OAuth2/queryParams/client_id</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///OAuth2/queryParams/grant_type</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///OAuth2/queryParams/client_secret</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//bwce_edison.contratti.vas.api.module///OAuth2/queryParams/username</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
   </packaging:properties>
   <packaging:modules>
     <packaging:module>

@@ -3,7 +3,7 @@
 	<element name="Output">
 		<complexType>
 			<sequence>
-				<element name="Posizione" type="tns:Posizione"></element>
+				<element minOccurs="0" maxOccurs="unbounded" name="Posizione" type="tns:Posizione"></element>
 			</sequence>
 		</complexType>
 	</element>

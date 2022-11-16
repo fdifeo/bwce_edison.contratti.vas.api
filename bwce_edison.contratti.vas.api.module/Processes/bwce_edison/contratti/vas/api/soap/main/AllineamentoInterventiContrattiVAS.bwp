@@ -1132,6 +1132,10 @@
             namespace="http://www.example.org/AllineamentoInterventiContrattiVASResponse" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/AllineamentoInterventiContrattiVASService/" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/AllineamentoInterventiContrattiVASRequest" prefix="tns3"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/"
         location="../../../../../../../Service%20Descriptors/AllineamentoInterventiContrattiVASService.wsdl" namespace="http://www.tibco.com/AllineamentoInterventiContrattiVASService/"/>
@@ -1161,13 +1165,14 @@
         <bpws:variable element="ns5:ActivityErrorData"
             name="_error_SetAndLog" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogInput" name="Log-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:ActivityErrorData" name="_error_Log" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogInput" name="LogProcessEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:ActivityErrorData"
+            name="_error_LogProcessEnd" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable
             messageType="ns1:allineamentoInterventiContrattiVASResponse"
-            name="Reply-input" sca-bpel:internal="true"/>
+            name="ReplyError-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:ExceptionLogInput"
             name="ExceptionLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:ActivityErrorData"
@@ -1201,11 +1206,11 @@
                                     <bpws:link
                                     name="ExceptionLogToReply" tibex:linkType="SUCCESS"/>
                                     </bpws:links>
-                                    <bpws:reply name="Reply"
+                                    <bpws:reply name="ReplyError"
                                     operation="allineamentoInterventiContrattiVAS"
                                     partnerLink="AllineamentoInterventiContrattiVASService"
                                     portType="ns1:AllineamentoInterventiContrattiVASService"
-                                    tibex:xpdlId="fc2179c9-7275-4aff-8b8a-54ab37104b5f" variable="Reply-input">
+                                    tibex:xpdlId="fc2179c9-7275-4aff-8b8a-54ab37104b5f" variable="ReplyError-input">
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns2="http://www.tibco.com/AllineamentoInterventiContrattiVASService/" xmlns:tns1="http://www.example.org/AllineamentoInterventiContrattiVASResponse" version="2.0"&gt;
     &lt;xsl:template name="Reply-input" match="/"&gt;
@@ -1321,6 +1326,8 @@
                             </bpws:extensionActivity>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASRequest&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;allineamentoInterventiContrattiVAS&quot;/>&#xa;    &lt;xsl:template name=&quot;SetAndLog-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:SetAndLogInput>&#xa;            &lt;tns:Header>&#xa;                &lt;tns:sessionId>&#xa;                    &lt;xsl:value-of select=&quot;tib:timestamp()&quot;/>&#xa;                &lt;/tns:sessionId>&#xa;                &lt;tns:correlationId>&#xa;                    &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                &lt;/tns:correlationId>&#xa;                &lt;tns:trackingId>&#xa;                    &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                &lt;/tns:trackingId>&#xa;                &lt;tns:sender>&#xa;                    &lt;xsl:value-of select=&quot;'SAP-CRM'&quot;/>&#xa;                &lt;/tns:sender>&#xa;            &lt;/tns:Header>&#xa;            &lt;tns:Input>&#xa;                &lt;tns:targetSystem>&#xa;                    &lt;xsl:value-of select=&quot;'SFDC'&quot;/>&#xa;                &lt;/tns:targetSystem>&#xa;                &lt;tns:message>&#xa;                    &lt;xsl:value-of select=&quot;'Inizio gestione richiesta su layer main per operation allineamentoInterventiContrattiVAS'&quot;/>&#xa;                &lt;/tns:message>&#xa;                &lt;tns:additionalLogParams>&#xa;                    &lt;tns:keyValuePair>&#xa;                        &lt;tns:key>&#xa;                            &lt;xsl:value-of select=&quot;'payload'&quot;/>&#xa;                        &lt;/tns:key>&#xa;                        &lt;tns:value>&#xa;                            &lt;xsl:value-of select=&quot;tib:render-xml($allineamentoInterventiContrattiVAS/parameters/tns3:Input, false(),false())&quot;/>&#xa;                        &lt;/tns:value>&#xa;                    &lt;/tns:keyValuePair>&#xa;                &lt;/tns:additionalLogParams>&#xa;            &lt;/tns:Input>&#xa;        &lt;/tns:SetAndLogInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="SetAndLog-input"
                                     name="SetAndLog"
                                     tibex:xpdlId="34923b7f-9681-43bf-ab0a-9d85ff48de9e" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
@@ -1329,7 +1336,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;SetAndLog-input&quot; match=&quot;/&quot;> &lt;tns:SetAndLogInput/>&lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASRequest&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;allineamentoInterventiContrattiVAS.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SetAndLog-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:SetAndLogInput>&#xa;            &lt;tns:Header>&#xa;                &lt;tns:sessionId>&#xa;                    &lt;xsl:value-of select=&quot;tib:timestamp()&quot;/>&#xa;                &lt;/tns:sessionId>&#xa;                &lt;tns:correlationId>&#xa;                    &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                &lt;/tns:correlationId>&#xa;                &lt;tns:trackingId>&#xa;                    &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                &lt;/tns:trackingId>&#xa;                &lt;tns:sender>&#xa;                    &lt;xsl:value-of select=&quot;'SAP-CRM'&quot;/>&#xa;                &lt;/tns:sender>&#xa;            &lt;/tns:Header>&#xa;            &lt;tns:Input>&#xa;                &lt;tns:targetSystem>&#xa;                    &lt;xsl:value-of select=&quot;'SFDC'&quot;/>&#xa;                &lt;/tns:targetSystem>&#xa;                &lt;tns:message>&#xa;                    &lt;xsl:value-of select=&quot;'Inizio gestione richiesta su layer main per operation allineamentoInterventiContrattiVAS'&quot;/>&#xa;                &lt;/tns:message>&#xa;                &lt;tns:additionalLogParams>&#xa;                    &lt;tns:keyValuePair>&#xa;                        &lt;tns:key>&#xa;                            &lt;xsl:value-of select=&quot;'payload'&quot;/>&#xa;                        &lt;/tns:key>&#xa;                        &lt;tns:value>&#xa;                            &lt;xsl:value-of select=&quot;tib:render-xml($allineamentoInterventiContrattiVAS.parameters, false(),false())&quot;/>&#xa;                        &lt;/tns:value>&#xa;                    &lt;/tns:keyValuePair>&#xa;                &lt;/tns:additionalLogParams>&#xa;            &lt;/tns:Input>&#xa;        &lt;/tns:SetAndLogInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1351,14 +1358,15 @@
                             </bpws:extensionActivity>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    inputVariable="Log-input" name="Log"
+                                    inputVariable="LogProcessEnd-input"
+                                    name="LogProcessEnd"
                                     tibex:xpdlId="3b1e84d4-f898-40b7-9d5e-58a86315fae8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
                                     <bpws:target linkName="allineamentoInterventiContrattiVASOutToLog"/>
                                     </bpws:targets>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;> &lt;tns:LogInput/>&lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;AllineamentoInterventiContrattiVASSub&quot;/>&lt;xsl:template name=&quot;LogProcessEnd-input&quot; match=&quot;/&quot;>&lt;tns:LogInput>&lt;tns:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns:targetSystem>&lt;tns:message>&lt;xsl:value-of select=&quot;'Fine gestione richiesta su layer main per operation allineamentoInterventiContrattiVAS'&quot;/>&lt;/tns:message>&lt;tns:additionalLogParams>&lt;tns:keyValuePair>&lt;tns:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns:key>&lt;tns:value>&lt;xsl:value-of select=&quot;tib:render-xml($AllineamentoInterventiContrattiVASSub, false(),false())&quot;/>&lt;/tns:value>&lt;/tns:keyValuePair>&lt;/tns:additionalLogParams>&lt;/tns:LogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1371,7 +1379,7 @@
                                     name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/psglog#//Log"/>
                                     <value Level="Info"
-                                    Phase="ProcessStart" xsi:type="psglog:Log"/>
+                                    Phase="ProcessEnd" xsi:type="psglog:Log"/>
                                     </properties>
                                     </activityConfig>
                                     </bwext:BWActivity>
