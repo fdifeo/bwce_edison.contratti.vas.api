@@ -1195,8 +1195,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    x="372"
-                                    xsi:type="notation:Bounds" y="46"/>
+                                    x="621"
+                                    xsi:type="notation:Bounds" y="52"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -1236,8 +1236,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
                                     <layoutConstraint
-                                    x="111"
-                                    xsi:type="notation:Bounds" y="46"/>
+                                    x="360"
+                                    xsi:type="notation:Bounds" y="52"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1252,7 +1252,8 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     <layoutConstraint
-                                    height="168" width="723" xsi:type="notation:Bounds"/>
+                                    height="168"
+                                    width="1143" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1493,6 +1494,12 @@
                 <bpws:literal>salesforce.HttpClientResourceOAuth2</bpws:literal>
             </bpws:from>
         </bpws:variable>
+        <bpws:variable name="resourcePath" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/OAuth2/resourcePath" type="xsd:string"/>
+        <bpws:variable name="resourcePath1" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/WorkOrder/resourcePath" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1605,7 +1612,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASResponse&quot; xmlns:tns7=&quot;http://tns.tibco.com/bw/json/1668441844843&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns3:Output/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/AllineamentoInterventiContrattiVASResponse&quot; xmlns:tns8=&quot;http://tns.tibco.com/bw/json/1668441844843&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;WorkOrderResponse&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns3:Output>&lt;xsl:for-each select=&quot;$WorkOrderResponse/tns8:records&quot;>&lt;tns3:Posizione>&lt;xsl:if test=&quot;tns8:FS_WorkTypeName__c&quot;>&lt;tns3:Tipologia_Intervento_Eseguito>&lt;xsl:value-of select=&quot;tns8:FS_WorkTypeName__c&quot;/>&lt;/tns3:Tipologia_Intervento_Eseguito>&lt;/xsl:if>&lt;xsl:if test=&quot;tns8:Status&quot;>&lt;tns3:Stato_Intervento>&lt;xsl:value-of select=&quot;tns8:Status&quot;/>&lt;/tns3:Stato_Intervento>&lt;/xsl:if>&lt;xsl:if test=&quot;tns8:FS_CreatedDateFormula__c&quot;>&lt;tns3:Data_Creazione_Intervento>&lt;xsl:value-of select=&quot;tns8:FS_CreatedDateFormula__c&quot;/>&lt;/tns3:Data_Creazione_Intervento>&lt;/xsl:if>&lt;xsl:if test=&quot;tns8:FS_AssignmentDateTime__c&quot;>&lt;tns3:Data_Assegnazione_Intervento>&lt;xsl:value-of select=&quot;tns8:FS_AssignmentDateTime__c&quot;/>&lt;/tns3:Data_Assegnazione_Intervento>&lt;/xsl:if>&lt;xsl:if test=&quot;tns8:FS_ActivityStartDateTime__c&quot;>&lt;tns3:Data_Inizio_Ultimo_Appuntamento>&lt;xsl:value-of select=&quot;tns8:FS_ActivityStartDateTime__c&quot;/>&lt;/tns3:Data_Inizio_Ultimo_Appuntamento>&lt;/xsl:if>&lt;xsl:if test=&quot;tns8:FS_ActivityFinishDateTime__c&quot;>&lt;tns3:Data_Fine_Ultimo_Appuntamento>&lt;xsl:value-of select=&quot;tns8:FS_ActivityFinishDateTime__c&quot;/>&lt;/tns3:Data_Fine_Ultimo_Appuntamento>&lt;/xsl:if>&lt;xsl:if test=&quot;tns8:FS_FinalBalanceApprovalDate__c&quot;>&lt;tns3:Data_Chiusura_Intervento>&lt;xsl:value-of select=&quot;tns8:FS_FinalBalanceApprovalDate__c&quot;/>&lt;/tns3:Data_Chiusura_Intervento>&lt;/xsl:if>&lt;/tns3:Posizione>&lt;/xsl:for-each>&lt;/tns3:Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1646,6 +1653,9 @@
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <attributeBindings
+                                bindingType="moduleProperty"
+                                eAttributeName="resourcePath" processProperty="resourcePath"/>
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//RestInvokeActivity"/>
@@ -1653,7 +1663,6 @@
                                     httpClientSR="httpClientResourceOAuth2"
                                     httpMethod="POST"
                                     requestContentType="JSON"
-                                    resourcePath="/services/oauth2/token?username=USERNAME&amp;password=PASSWORD&amp;grant_type=password&amp;client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET"
                                     responseAcceptType="JSON" xsi:type="restjson:RestInvokeActivity"/>
                                 </properties>
                             </activityConfig>
@@ -1684,13 +1693,15 @@
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <attributeBindings
+                                bindingType="moduleProperty"
+                                eAttributeName="resourcePath" processProperty="resourcePath1"/>
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//RestInvokeActivity"/>
                                     <value
                                     httpClientSR="httpClientResourceWorkOrder"
                                     requestContentType="JSON"
-                                    resourcePath="/services/data/v54.0/query/?q="
                                     responseAcceptType="JSON" xsi:type="restjson:RestInvokeActivity"/>
                                 </properties>
                             </activityConfig>

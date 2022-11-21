@@ -28,13 +28,54 @@
   <sca:property xmi:id="_rOXF4GQPEe2MUaI7IxL9-A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_rOeaoGQPEe2MUaI7IxL9-A" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_rOnkkGQPEe2MUaI7IxL9-A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_vBxpAGXDEe2WWs9uMFkfYQ" name="/Resources/internal/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_wuQY8GXDEe2WWs9uMFkfYQ" name="/Resources/salesforce/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_3WJbMGmuEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_yqGGUGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_y6R3YGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/AcceptQueueSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_y8kWYGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/AcceptorThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zgaDQGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/HideServerImplementation" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zhzKYGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/HeaderBufferSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zi4IcGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/RequestBufferSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zkM-IGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/ResponseBufferSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zlf-oGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/MaxIdleTime" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zm3QkGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/LowResourceMaxIdleTime" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_znzEsGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/LingerTime" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zpK9sGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/SessionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zqWCYGmvEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/MaxPostSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Frc3YGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/MaxSavePostSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FwOCoGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/MinimumQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_F0zAoGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/MaximumQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_F4ueYGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/UseNonBlockingIOSockets" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_F8HJkGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/UseDirectBuffers" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GATGAGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/URIEncoding" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GEqBkGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/EnableDNSLookups" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GH4UsGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/Compression" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GME4MGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/CompressibleMIMETypes" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GP194GmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/ReverseProxyHost" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GULEQGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/ReverseProxyPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GYBpgGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/EnableAccessLogs" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GbUOEGmwEe2XZ6pRerVczg" name="/Resources/internal/InboundConnector/ShareAcrossApplications" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_7AYRQGmuEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/DefaultHostOAuth2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GgdCMGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/DefaultHostWorkOrder" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GoaEUGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/DefaultPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GsG4kGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/DisableConnectionPooling" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GuooIGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/IdleConnectionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Gw9jYGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/StaleCheck" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Gy0kkGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/MaximumTotalConnections" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_G1Z-gGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/MaximumTotalConnectionsPerHostRoute" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_G3EycGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/SocketTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bSixEGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/AcceptRedirect" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bX05sGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/UseSingleCookieHeader" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bcLOMGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/LogRequestResponseTime" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bf1mMGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/ConnectionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bjW0QGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/RetryCount" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bmQXQGmvEe2XZ6pRerVczg" name="/Resources/salesforce/HttpClientResource/UseNonPreemptiveAuthentication" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_IHBoUGm4Ee2XZ6pRerVczg" name="/OAuth2/resourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_KA3ssGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_P1DR0GXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_P79LEGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/client_id" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_QAGEMGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/client_secret" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_QDqVkGXEEe2WWs9uMFkfYQ" name="/OAuth2/queryParams/grant_type" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_B_JEEGm4Ee2XZ6pRerVczg" name="/WorkOrder/resourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_Ss72IGQdEe2bRY7uvVW8eQ" name="ComponentAllineamentoInterventiContrattiVAS" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ss72IWQdEe2bRY7uvVW8eQ" processName="bwce_edison.contratti.vas.api.soap.main.AllineamentoInterventiContrattiVAS"/>
     <sca:service xmi:id="_tV_vsGQuEe2bRY7uvVW8eQ" name="AllineamentoInterventiContrattiVASService">

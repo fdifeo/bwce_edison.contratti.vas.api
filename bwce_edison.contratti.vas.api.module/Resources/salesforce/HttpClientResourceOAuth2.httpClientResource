@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_tMIXIWQwEe2bRY7uvVW8eQ" name="salesforce.HttpClientResourceOAuth2" type="http:HttpClientConfiguration">
-  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_tMSvMGQwEe2bRY7uvVW8eQ" httpClientVersion="httpcomponents" retryCount="3" idleConnectionTimeout="3000" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
-    <tcpDetails xmi:id="_tMcgMGQwEe2bRY7uvVW8eQ" host="assistenzacasa--uat.lightning.force.com" port="443"/>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_tMSvMGQwEe2bRY7uvVW8eQ" httpClientVersion="httpcomponents" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
+    <substitutionBindings xmi:id="_fJ98UGm0Ee2XZ6pRerVczg" template="useSingleThreadConnectionManager" propName="/Resources/salesforce/HttpClientResource/DisableConnectionPooling"/>
+    <substitutionBindings xmi:id="_ipmE4Gm0Ee2XZ6pRerVczg" template="idleConnectionTimeout" propName="/Resources/salesforce/HttpClientResource/IdleConnectionTimeout"/>
+    <substitutionBindings xmi:id="_mNS1IGm0Ee2XZ6pRerVczg" template="maxTotalConnections" propName="/Resources/salesforce/HttpClientResource/MaximumTotalConnections"/>
+    <substitutionBindings xmi:id="_oFyn0Gm0Ee2XZ6pRerVczg" template="maxTotalConnectionsPerHost" propName="/Resources/salesforce/HttpClientResource/MaximumTotalConnectionsPerHostRoute"/>
+    <substitutionBindings xmi:id="_AMPDYGm1Ee2XZ6pRerVczg" template="acceptRedirect" propName="/Resources/salesforce/HttpClientResource/AcceptRedirect"/>
+    <substitutionBindings xmi:id="_CENRoGm1Ee2XZ6pRerVczg" template="useSingleCookieHeader" propName="/Resources/salesforce/HttpClientResource/UseSingleCookieHeader"/>
+    <substitutionBindings xmi:id="_E_mrwGm1Ee2XZ6pRerVczg" template="logReqRespTime" propName="/Resources/salesforce/HttpClientResource/LogRequestResponseTime"/>
+    <substitutionBindings xmi:id="_KV6pIGm1Ee2XZ6pRerVczg" template="retryCount" propName="/Resources/salesforce/HttpClientResource/RetryCount"/>
+    <substitutionBindings xmi:id="_MYhaEGm1Ee2XZ6pRerVczg" template="useNonPreemptiveAuth" propName="/Resources/salesforce/HttpClientResource/UseNonPreemptiveAuthentication"/>
+    <tcpDetails xmi:id="_tMcgMGQwEe2bRY7uvVW8eQ">
+      <substitutionBindings xmi:id="_SJQUgGmzEe2XZ6pRerVczg" template="host" propName="/Resources/salesforce/HttpClientResource/DefaultHostOAuth2"/>
+      <substitutionBindings xmi:id="_VMpNAGmzEe2XZ6pRerVczg" template="port" propName="/Resources/salesforce/HttpClientResource/DefaultPort"/>
+      <substitutionBindings xmi:id="_rE9HoGm0Ee2XZ6pRerVczg" template="staleCheck" propName="/Resources/salesforce/HttpClientResource/StaleCheck"/>
+      <substitutionBindings xmi:id="_4NRBsGm0Ee2XZ6pRerVczg" template="soTimeout" propName="/Resources/salesforce/HttpClientResource/SocketTimeout"/>
+      <substitutionBindings xmi:id="_7EK9YGm0Ee2XZ6pRerVczg" template="connectionTimeout" propName="/Resources/salesforce/HttpClientResource/ConnectionTimeout"/>
+    </tcpDetails>
   </jndi:configuration>
 </jndi:namedResource>

@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_9QtqgGQvEe2bRY7uvVW8eQ" name="internal.HTTPConnectorResource" type="httpconnector:HttpConnectorConfiguration">
-  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_9Q7F4GQvEe2bRY7uvVW8eQ" acceptQueueSize="-1" newAccessLogs="true">
-    <substitutionBindings xmi:id="_9Q_XUGQvEe2bRY7uvVW8eQ" template="host" propName="BW.HOST.NAME"/>
-    <substitutionBindings xmi:id="_9Q_XUWQvEe2bRY7uvVW8eQ" template="port" propName="BW.CLOUD.PORT"/>
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_9Q7F4GQvEe2bRY7uvVW8eQ" newAccessLogs="true">
+    <substitutionBindings xmi:id="_9Q_XUGQvEe2bRY7uvVW8eQ" template="host" propName="/Resources/internal/InboundConnector/Host"/>
+    <substitutionBindings xmi:id="_9Q_XUWQvEe2bRY7uvVW8eQ" template="port" propName="/Resources/internal/InboundConnector/Port"/>
+    <substitutionBindings xmi:id="_XGrwcGm2Ee2XZ6pRerVczg" template="acceptQueueSize" propName="/Resources/internal/InboundConnector/AcceptQueueSize"/>
+    <substitutionBindings xmi:id="_YcEPAGm2Ee2XZ6pRerVczg" template="acceptors" propName="/Resources/internal/InboundConnector/AcceptorThreads"/>
+    <substitutionBindings xmi:id="_ajw7UGm2Ee2XZ6pRerVczg" template="hideErrorResponse" propName="/Resources/internal/InboundConnector/HideServerImplementation"/>
+    <substitutionBindings xmi:id="_c2OtMGm2Ee2XZ6pRerVczg" template="headerBufferSize" propName="/Resources/internal/InboundConnector/HeaderBufferSize"/>
+    <substitutionBindings xmi:id="_hGqAkGm2Ee2XZ6pRerVczg" template="requestBufferSize" propName="/Resources/internal/InboundConnector/RequestBufferSize"/>
+    <substitutionBindings xmi:id="_kljwYGm2Ee2XZ6pRerVczg" template="responseBufferSize" propName="/Resources/internal/InboundConnector/ResponseBufferSize"/>
+    <substitutionBindings xmi:id="_oGSFIGm2Ee2XZ6pRerVczg" template="useDirectBuffers" propName="/Resources/internal/InboundConnector/UseDirectBuffers"/>
+    <substitutionBindings xmi:id="_qsxmQGm2Ee2XZ6pRerVczg" template="uriEncoding" propName="/Resources/internal/InboundConnector/URIEncoding"/>
+    <substitutionBindings xmi:id="_tPHnMGm2Ee2XZ6pRerVczg" template="maxIdleTime" propName="/Resources/internal/InboundConnector/MaxIdleTime"/>
+    <substitutionBindings xmi:id="_xZn4wGm2Ee2XZ6pRerVczg" template="enableDNSLookup" propName="/Resources/internal/InboundConnector/EnableDNSLookups"/>
+    <substitutionBindings xmi:id="_0QxFAGm2Ee2XZ6pRerVczg" template="lowResourceMaxIdleTime" propName="/Resources/internal/InboundConnector/LowResourceMaxIdleTime"/>
+    <substitutionBindings xmi:id="_3iDPkGm2Ee2XZ6pRerVczg" template="compression" propName="/Resources/internal/InboundConnector/Compression"/>
+    <substitutionBindings xmi:id="_5rfoUGm2Ee2XZ6pRerVczg" template="lingerTime" propName="/Resources/internal/InboundConnector/LingerTime"/>
+    <substitutionBindings xmi:id="_8igRsGm2Ee2XZ6pRerVczg" template="compressableMimeTypes" propName="/Resources/internal/InboundConnector/CompressibleMIMETypes"/>
+    <substitutionBindings xmi:id="_--vDkGm2Ee2XZ6pRerVczg" template="sessionTimeout" propName="/Resources/internal/InboundConnector/SessionTimeout"/>
+    <substitutionBindings xmi:id="_CA5NAGm3Ee2XZ6pRerVczg" template="reverseProxyHost" propName="/Resources/internal/InboundConnector/ReverseProxyHost"/>
+    <substitutionBindings xmi:id="_DfhuMGm3Ee2XZ6pRerVczg" template="reverseProxyPort" propName="/Resources/internal/InboundConnector/ReverseProxyPort"/>
+    <substitutionBindings xmi:id="_GXv4gGm3Ee2XZ6pRerVczg" template="maxPostSize" propName="/Resources/internal/InboundConnector/MaxPostSize"/>
+    <substitutionBindings xmi:id="_IsNOcGm3Ee2XZ6pRerVczg" template="maxSavePostSize" propName="/Resources/internal/InboundConnector/MaxSavePostSize"/>
+    <substitutionBindings xmi:id="_MCCh0Gm3Ee2XZ6pRerVczg" template="minThreads" propName="/Resources/internal/InboundConnector/MinimumQTPThreads"/>
+    <substitutionBindings xmi:id="_N-Zg0Gm3Ee2XZ6pRerVczg" template="maxThreads" propName="/Resources/internal/InboundConnector/MaximumQTPThreads"/>
+    <substitutionBindings xmi:id="_Rr67cGm3Ee2XZ6pRerVczg" template="enableAccessLogs" propName="/Resources/internal/InboundConnector/EnableAccessLogs"/>
+    <substitutionBindings xmi:id="_S8pjgGm3Ee2XZ6pRerVczg" template="shareAcrossApplications" propName="/Resources/internal/InboundConnector/ShareAcrossApplications"/>
   </jndi:configuration>
 </jndi:namedResource>
